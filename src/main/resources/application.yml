@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: JUST_AI.VK_BOT
+
+vk:
+  confirmation-token: <your_confirmation_token>
+  access-token: <your_access_token>

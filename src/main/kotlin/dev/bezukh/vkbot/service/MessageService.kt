@@ -1,5 +1,6 @@
 package dev.bezukh.vkbot.service
 
+import dev.bezukh.vkbot.utils.RandomIdGenerator
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Service
@@ -70,7 +71,7 @@ class MessageService(
         val params = mapOf(
             "peer_id" to peerId,
             "message" to message,
-            "random_id" to (0..Int.MAX_VALUE).random()
+            "random_id" to RandomIdGenerator.generateRandomId()
         )
 
         return callApiMethod("messages.send", params)
